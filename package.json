@@ -1,0 +1,30 @@
+{
+  "name": "eboot",
+  "version": "0.0.1",
+  "description": "bootstrap for express",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demohi/eboot.git"
+  },
+  "keywords": [
+    "bootstrap"
+  ],
+  "author": "mdemo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demohi/eboot/issues"
+  },
+  "homepage": "https://github.com/demohi/eboot",
+  "dependencies": {
+    "rd": "0.0.2",
+    "lodash": "~2.4.1",
+    "strip-path": "~1.0.0"
+  }
+}
