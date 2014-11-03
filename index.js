@@ -7,7 +7,6 @@ var strip = require('strip-path');
 
 var eboot = function(app, dir){
     var routers = dir || 'routers';
-    //读取所有子目录
     var dirs = rd.readDirSync(path.join(__dirname , routers));
     dirs.forEach(function(dir){
         var base = '/' +strip(dir,routers);
