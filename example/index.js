@@ -6,6 +6,6 @@ var eboot = require('..');
 
 var app = express();
 
-app.use(eboot(app, '/example/routers'));
+app.use(eboot(app));
 
 app.listen(3000);
