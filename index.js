@@ -11,8 +11,8 @@ var eboot = function(app, dir){
         var routers = dir || 'routers';
         var dirs = rd.readDirSync(path.join(dirname , routers));
         dirs.forEach(function(dir){
-            var base = '/' +strip(dir,routers);
-            app.use(base, require(path.join(dirname,routers, base)));
+            var base = strip(dir,routers);
+            app.use('/' + base, require(path.join(dirname,routers, base)));
         });
         next();
     }
