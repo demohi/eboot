@@ -8,7 +8,7 @@ var dirname = path.dirname(require.main.filename);
 
 var eboot = function(app, dir){
     return function(req, res, next){
-        if(app.bootstrap){
+        if(app.get('bootstrap')){
             next();
             return;
         }
@@ -18,7 +18,7 @@ var eboot = function(app, dir){
             var base = strip(dir,routers);
             app.use('/' + base, require(path.join(dirname,routers, base)));
         });
-        app.bootstrap = true;
+        app.set('bootstrap', true);
         next();
     }
 };
